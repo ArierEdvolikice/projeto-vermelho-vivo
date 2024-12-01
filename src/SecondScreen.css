@@ -1,0 +1,194 @@
+.second-screen {
+  font-family: Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Marquee */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #007bff;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.marquee p {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+  margin: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Título principal */
+.main-title {
+  margin: 5% 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Layout das colunas */
+.columns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.column {
+  flex: 1 1;
+  min-width: 250px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.column h2 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.column p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Grid de imagens */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Garante sempre 3 colunas */
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+.gradient-fade {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Ajuste a altura da área do gradiente */
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1)); /* Gradiente de fade */
+  border-bottom-left-radius: 10px; /* Bordas arredondadas na parte inferior */
+  border-bottom-right-radius: 10px; /* Bordas arredondadas na parte inferior */
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Marquee */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 0;
+  margin-bottom: 20px; /* Espaço entre marquee e título */
+}
+
+.marquee p {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Título da modal */
+.modal-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Conteúdo da modal */
+.modal-content {
+  margin-bottom: 20px;
+}
+
+/* Fechar botão */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+
+/* Botão de voltar */
+.back-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.swiper-slide {
+  align-content: center !important;
+  height: 70vh;
+}

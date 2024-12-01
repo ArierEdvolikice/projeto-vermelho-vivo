@@ -1,38 +1,86 @@
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Certifique-se de que .App ocupe a tela inteira */
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajustado para sempre ocupar a tela inteira */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
   text-align: center;
+  box-sizing: border-box; /* Garante que o padding seja incluído na altura */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end; /* Alinha o conteúdo ao final */
+  height: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+  color: white; /* Texto em branco para contraste */
 }
 
-.App-link {
-  color: #61dafb;
+.home-button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #f2f2f2;
+  border: solid 1px #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 25px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-button:hover {
+  background-color: #F2F2F2; /* Cor secundária */
+  color: #261914; /* Texto escuro */
 }
+
+.swiper-pagination {
+  position: static !important; 
+}
+
+
+
+
+
+
